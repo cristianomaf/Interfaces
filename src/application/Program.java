@@ -23,10 +23,10 @@ public class Program {
 		System.out.print("Entre com modelo do Carro: ");
 		String modelo = scan.nextLine();
 		
-		System.out.println("Entre com data da retirada do veiculo: (dd/MM/yyyy");
+		System.out.println("Entre com data da retirada do veiculo: (dd/MM/yyyy)");
 		Date dataRetirada = sdf.parse(scan.nextLine());
 		
-		System.out.println("Entre com data de devolucao do veiculo: (dd/MM/yyyy");
+		System.out.println("Entre com data de devolucao do veiculo: (dd/MM/yyyy)");
 		Date dataEntrega = sdf.parse(scan.nextLine());
 		
 		AluguelCarro aluguel = new AluguelCarro(dataRetirada, dataEntrega, new Veiculo(modelo));
@@ -36,7 +36,7 @@ public class Program {
 		double precoPorHora = scan.nextDouble();
 		System.out.print("Insira o valor do preco por dia: ");
 		double precoPorDia = scan.nextDouble();
-		
+		                                 //aqui mantem o Brasil Imposto servicos que faz upcasting para nova interface Servico imposto
 		ServicoDeAluguel servicoDeAluguel =  new ServicoDeAluguel(precoPorHora, precoPorDia, new BrasilImpostoServicos());
 		servicoDeAluguel.processaFatura(aluguel);
 		

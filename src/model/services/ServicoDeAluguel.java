@@ -7,14 +7,14 @@ public class ServicoDeAluguel {
 	private Double precoPorHora;
 	private Double precoPorDia;
 	
-	//vinvulo com classe BrasilImpostoServicos
-	private BrasilImpostoServicos issBrasil;
+	//vinvulo com classe interface Servico imposto
+	private ServicoImposto issBrasil;
 	
 	public ServicoDeAluguel() {
 		
 	}
 
-	public ServicoDeAluguel(Double precoPorHora, Double precoPorDia, BrasilImpostoServicos issBrasil) {
+	public ServicoDeAluguel(Double precoPorHora, Double precoPorDia,ServicoImposto issBrasil) {
 		this.precoPorHora = precoPorHora;
 		this.precoPorDia = precoPorDia;
 		this.issBrasil = issBrasil;

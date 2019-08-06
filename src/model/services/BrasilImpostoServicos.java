@@ -1,6 +1,6 @@
 package model.services;
 
-public class BrasilImpostoServicos {
+public class BrasilImpostoServicos implements ServicoImposto {
 	
 	
 	//metodo
